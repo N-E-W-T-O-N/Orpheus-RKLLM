@@ -1,0 +1,32 @@
+[project]
+name = "rknn-testing"
+version = "1.0.0"
+description = "RKNN Testing"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fast-histogram>=0.11",
+    "hf-xet>=1.1.0",
+    "ipykernel>=6.29.5",
+    "jupyter>=1.1.1",
+    "notebook>=7.4.1",
+    "numpy<=1.26.4",
+    "onnx==1.14.1",
+    "onnxoptimizer==0.3.8",
+    "onnxruntime==1.16.0",
+    "opencv-python>=4.5.5.64",
+    "pillow>=10.0.1",
+    "protobuf==3.20.3",
+    "psutil>=5.9.0",
+    "pydantic>=2.11.4",
+    "rknn-toolkit-lite2",
+    "rknn-toolkit2",
+    "ruamel-yaml>=0.17.21",
+    "ruff>=0.11.9",
+    "scipy>=1.9.3",
+    "soundfile>=0.13.1",
+    "torch>=1.13.1,<=2.2.0",
+    "torchvision>=0.17.0",
+    "tqdm>=4.64.1",
+    "transformers>=4.51.3",
+]
