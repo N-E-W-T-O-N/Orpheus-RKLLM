@@ -149,7 +149,7 @@ int main(int argc, char **argv) {
   std::vector<float> audio =
       run_onnx(std::get<0>(codes), std::get<1>(codes), std::get<2>(codes));
 
-  // std::string audio =(argc > 5 ) ? argc[5] : "output.wav"
+  std::string audio =(argc > 5 ) ? argc[5] : "output.wav"
   //  Convert waveform to audio
   saveWav(audio, "output.wav", 24000);
 

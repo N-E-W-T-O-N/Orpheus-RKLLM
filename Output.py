@@ -1,13 +1,6 @@
 import numpy as np
 import soundfile as sf
-
 import onnxruntime as ort
-
-# Output()
-
-
-session = ort.InferenceSession("decoder_model.onnx", providers=['CPUExecutionProvider'])
-
 
 def create_codes(generated_ids):
     token_to_find = 128257
@@ -56,6 +49,11 @@ def run_onnx(code_list):
     inputs = {"audio_codes.0": np.expand_dims(np.array(layer_1, dtype=np.int64), axis=0),
               "audio_codes.1": np.expand_dims(np.array(layer_2, dtype=np.int64), axis=0),
               "audio_codes.2": np.expand_dims(np.array(layer_3, dtype=np.int64), axis=0)}
+    
+    
+              
+    session = ort.InferenceSession("decoder_model.onnx", providers=['CPUExecutionProvider'])
+              
     output = session.run(None, inputs)
     audio_hat = output[0]
     return audio_hat
