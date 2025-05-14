@@ -1,13 +1,16 @@
-#include "input.h"
-#include "output.hpp"
-#include "rkllm.h"
 #include <cstdint>
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <string.h>
 #include <string>
+#include <cstring>
 #include <vector>
+#include <tuple>
+#include "rkllm.h"
+#include "input.h"
+#include "output.hpp"
+
+
 
 std::vector<int64_t> Response_Ids;
 
@@ -149,9 +152,9 @@ int main(int argc, char **argv) {
   std::vector<float> audio =
       run_onnx(std::get<0>(codes), std::get<1>(codes), std::get<2>(codes));
 
-  std::string audio =(argc > 5 ) ? argc[5] : "output.wav"
+  std::string audio_file =(argc > 5 ) ? argv[5] : "output.wav" ;
   //  Convert waveform to audio
-  saveWav(audio, "output.wav", 24000);
+  saveWav(audio, audio_file, 24000);
 
   return 0;
 }

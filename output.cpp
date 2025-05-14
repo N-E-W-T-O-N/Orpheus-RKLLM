@@ -4,7 +4,7 @@
 #include <iostream>
 #include <onnxruntime_cxx_api.h>
 #include <vector>
-
+#include <tuple>
 // #include "onnxruntime/include/onnxruntime_cxx_api.h"
 
 // Remove specific tokens
