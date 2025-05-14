@@ -1,7 +1,7 @@
 # Orpheus Neural Text-to-Speech Engine using RkLLM
 
 ## Overview
-This project implements a neural text-to-speech (TTS) system that converts text input into natural-sounding speech. It uses a combination of neural networks and ONNX runtime for efficient inference.
+This project implements a  [Orpheus](https://github.com/canopyai/Orpheus-TTS) text-to-speech (TTS) system that converts text input into natural-sounding speech. It uses a combination of neural networks and ONNX runtime for efficient inference.
 
 ## Features
 - Text to speech conversion using neural networks
