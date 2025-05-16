@@ -1,4 +1,8 @@
-from huggingface_hub import hf_hub_download
+try :
+    from huggingface_hub import hf_hub_download
+except ImportError:
+    print("Please install huggingface_hub first.")
+    exit(1)
 
 print("Download the model `orpheus_3b_0.1_ft_w8a8_RK3588_16bit.rkllm`...")
 
